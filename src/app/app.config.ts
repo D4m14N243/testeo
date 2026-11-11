@@ -8,17 +8,6 @@ import Aura from "@primeuix/themes/aura"
 import {providePrimeNG} from "primeng/config"
 import {definePreset} from "@primeuix/themes"
 
-/* const MyPreset = definePreset(Aura, {
-    semantic: {
-      primary: {
-        500: "{indigo.500}",
-        600: "{indigo.600}",
-        700: "{indigo.700}"
-      }
-    }
-  })
-*/
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
