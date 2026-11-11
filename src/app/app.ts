@@ -20,7 +20,8 @@ export class App {
     this.sidebar.setComponents([
       new MCSubtitle("MENU"),
       new MCMenu([
-        {label: "Products", link: "/products"}
+        {label: "Products", link: "/products"},
+        {label: "Login", link: "/login"}
       ])
     ])
     this.topbar.addComponentToLeft(new MCIconToggleSidebarButton())

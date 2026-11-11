@@ -7,19 +7,10 @@ import {Router} from "@angular/router"
 @Component({
   selector: 'app-login',
   imports: [MCAuthBasicComponent],
-  template: `<mc-auth-basic [config]="config" (submit)="login($event)" />`,
+  template: `<div class= "p-6 max-w-7xl mx-auto">
+                <header class="mb-6">
+                  <h1 class="text-2xl font-semibold text-indigo-900">Login</h1>
+                </header>
+              </div>`,
 })
-export class LoginComponent {
-  config = Object.assign(new MCAuthBasicConfig(), {
-    title:"Sign in",
-    submitButton: "Sign in"
-  })
-  private readonly auth = inject((MCAuthenticationService))
-  private readonly router = inject(Router)
-  login(data: MCAuthModel) {
-    this.auth.signIn(data).subscribe({
-      next: () => this.router.navigateByUrl("/"),
-      error: err => console.error
-    })
-  }
-}
+export class LoginComponent {}
